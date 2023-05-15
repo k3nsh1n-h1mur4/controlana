@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}
+ {{ title }}
+{% endblock %}
+
+
+{% block content %}
+     <form method="POST">
+	{% csrf_token %}
+	<div class="fieldset">
+	    <label for="ppta"># de Propuesta</label>
+	    <input type="text" name="ppta" value="{{ obj.ppta }}" placeholder="{{ obj.ppta }}" class="form-control">
+	</div>
+	 <div class="fieldset">
+	    <label for="fecha">Fecha</label>
+	    <input type="text" name="fecha" value="{{ obj.fecha }}" placeholder="{{ obj.fecha }}" class="form-control">
+	</div>
+	<div class="fieldset">
+	    <label for="aspirante">Aspirante</label>
+	    <input type="text" name="aspirante" value="{{ obj.aspirante }}" placeholder="{{ obj.aspirante }}" class="form-control">
+	</div>
+	<div class="fieldset">
+	    <label for="categoria">Categoría</label>
+	    <input type="text" name="categoria" value="{{ obj.categoria }}" placeholder="{{ obj.categoria }}" class="form-control">
+	</div>
+	<div class="fieldset">
+	    <label for="propone">Propone</label>
+	    <input type="text" name="propone" value="{{ obj.propone }}" placeholder="{{ obj.propone }}" class="form-control">
+	</div>
+	<div class="fieldset">
+	    <label for="telefono">Teléfono</label>
+	    <input type="text" name="telefono" value="{{ obj.telefono }}" placeholder="{{ obj.telefono }}" class="form-control">
+	</div>
+	<div class="fieldser">
+	    <label for="zona">Zona</label>
+	    <input type="text" name="zona" value="{{ obj.zona }}" placeholder="{{ obj.zona }}" class="form-control">
+	</div>
+	<p>
+	  <input type="submit" value="Guardar" class="btn btn-primary">
+	 </p>
+    </form>
+
+{% endblock %}
