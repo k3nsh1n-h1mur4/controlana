@@ -78,8 +78,11 @@ WSGI_APPLICATION = 'controlana.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'controlana.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'controlana',
+        'HOST': 'localhost',
+        'USER': 'root',
+        'PASSWORD': 'k0rn82...'
     }
 }
 
